@@ -1,0 +1,21 @@
+
+
+<div class="container">
+    <table>
+        <tr >
+            <td>UserId</td>
+            <td>Id</td>
+            <td>Title</td>
+            <td>Completed</td>
+        </tr>
+        <tr  *ngFor="let dados of user">
+            <td >{{dados.userId}}</td>
+            <td >{{dados.id}}</td>
+            <td >{{dados.title}}</td>
+            <td >{{dados.completed}}</td>
+        </tr>
+    </table>
+</div>
+
+
+
