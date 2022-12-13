@@ -1,4 +1,4 @@
-import { Todo } from './../userinterface';
+import { Todo } from '../dadointerface';
 import { DadosService } from './../dados.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -10,8 +10,8 @@ import { Component, OnInit } from '@angular/core';
 export class UsersComponent implements OnInit {
 
   constructor(private DadosService:DadosService) {}
-  
-  user: Todo[] = [];
+
+  todo: Todo[] = [];
 
   //toDisplay = false;
   ngOnInit(): void {
@@ -20,7 +20,7 @@ export class UsersComponent implements OnInit {
 
   showUsers(){
     //this.toDisplay = !this.toDisplay;
-    this.DadosService.getUser().subscribe(user => this.user = user)
+    this.DadosService.getUser().subscribe(dados => this.todo = dados)
   }
 
 }
